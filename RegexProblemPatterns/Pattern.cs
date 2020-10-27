@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -10,81 +10,62 @@ namespace RegexPoblemPatterns
     /// </summary>
     class Pattern
     {
-        public static string FIRST_NAME = "^[A-Z][a-z]{2,}$";
-        public static string LAST_NAME = "^[A-Z][a-z]{2,}$";
-        public static string EMAIL_ID = "^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$";
-        public static string MOBILE_NUMBER = "^[+][1-9][0-9]{0,2}[-][1-9][0-9]{9}$";
-        public static string PASSWORD = "[0-9a-zA-Z]{8}$";
+        public const string USER_NAME = "^[A-Z][a-z]{2,}[ ][A-Z][a-z]{2,}$";
+        public const string EMAIL_ID = "^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*@[0-9a-zA-Z]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$";
+        public const string MOBILE_NUMBER = "^[+][1-9][0-9]{0,2}[-][1-9][0-9]{9}$";
+        public const string PASSWORD = "^(.{8,}|[^0-9]*|[^!#@$%^&*()<>:@?{}]*|[^A-Z])$";
 
         /// <summary>
         /// Validates the first name.
         /// </summary>
         /// <param name="fname">The fname.</param>
-        public void ValidateFirstName(string fname)
+        public bool ValidateFullName(string fullName)
         {
-            bool firstNameCheck = Regex.IsMatch(fname, FIRST_NAME);
-            if (firstNameCheck)
+            /// It will check Full Name and, It returns ture or false
+            bool fullNameCheck = Regex.IsMatch(fullName, USER_NAME);
+            if (fullNameCheck)
             {
-                Console.WriteLine(fname + " :is Valid");
+                return true;
             }
             else
             {
-                Console.WriteLine(fname + " :is Not Valid");
+                return false;
             }
-        }
-
-        /// <summary>
-        /// Validates the last name.
-        /// </summary>
-        /// <param name="lname">The lname.</param>
-        public void ValidateLastName(string lname)
-        {
-            /// It Checks the Last Name and, Prints valid or not
-            bool lastNameCheck = Regex.IsMatch(lname, LAST_NAME);
-            if (lastNameCheck)
-            {
-                Console.WriteLine(lname + " :is Valid");
-            }
-            else
-            {
-                Console.WriteLine(lname + " :is Not Valid");
-            }
-
         }
 
         /// <summary>
         /// Validates the email.
         /// </summary>
         /// <param name="email">The email.</param>
-        public void ValidateEmail(string email)
+        public bool ValidateEmail(string eMail)
         {
-            /// It Checks the Email and, Prints valid or not
-            bool emailCheck = Regex.IsMatch(email, EMAIL_ID);
+            /// It Checks the Email and, It returns ture or false
+            bool emailCheck = Regex.IsMatch(eMail, EMAIL_ID);
             if (emailCheck)
             {
-                Console.WriteLine(email + " :is Valid");
+                return true;
             }
             else
             {
-                Console.WriteLine(email + " :is Not Valid");
+                return false;
             }
         }
-
+      
         /// <summary>
         /// Validates the phone number.
         /// </summary>
         /// <param name="mobileNumber">The mobile number.</param>
-        public void ValidatePhoneNo(string mobileNumber)
+        public bool ValidatePhoneNo(string mobileNumber)
         {
-            /// It Checks the First Name and, Prints valid or not
+            /// It Checks the Mobile Number and, It returns ture or false
             bool numberCheck = Regex.IsMatch(mobileNumber, MOBILE_NUMBER);
             if (numberCheck)
             {
-                Console.WriteLine(mobileNumber + " :is Valid");
+                return true;
             }
             else
             {
-                Console.WriteLine(mobileNumber + " :is Not Valid");
+                return false;
             }
         }
 
@@ -92,17 +73,17 @@ namespace RegexPoblemPatterns
         /// Validates the password.
         /// </summary>
         /// <param name="password">The password.</param>
-        public void ValidatePassword(string password)
+        public bool ValidatePassword(string password)
         {
-            /// It Checks the First Name and, Prints valid or not
-            bool numberCheck = Regex.IsMatch(password, PASSWORD);
-            if (numberCheck)
+            /// It Checks the Password and, It returns ture or false
+            bool passwordCheck = Regex.IsMatch(password, PASSWORD);
+            if (passwordCheck)
             {
-                Console.WriteLine(password + " :is Valid");
+                return true;
             }
             else
             {
-                Console.WriteLine(password + " :is Not Valid");
+                return false;
             }
         }
     }

@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  C# CODING STANDARDS - LINE SPACE
  *  NOTE - A SINGLE BLANK LINE SEPARATES THE TWO BLOCKS i.e. USING STATEMENTS, CLASS DECLARATION, etc
  */
@@ -31,30 +31,25 @@ namespace RegexPoblemPatterns
             /// Creating a Reference for Pattern Class
             Pattern pattern = new Pattern();
 
-            /// Taking First Name from Console to Validate
-            Console.WriteLine("Enter the First Name :");
-            string fname = Console.ReadLine();
-            pattern.ValidateFirstName(fname);
-
-            /// Taking Last Name from Console to Validate
-            Console.WriteLine("Enter the Last Name :");
-            string lname = Console.ReadLine();
-            pattern.ValidateLastName(lname);
+            /// Taking Full Name from Console to Validate
+            Console.WriteLine("Enter the Full Name :");
+            string fullName = Console.ReadLine();
+            Console.WriteLine(pattern.ValidateFirstName(fullName));
 
             /// Taking Email from Console to Validate
             Console.WriteLine("Enter the Email :");
-            string email = Console.ReadLine();
-            pattern.ValidateEmail(email);
+            string eMail = Console.ReadLine();
+            Console.WriteLine(pattern.ValidateEmail(eMail));
 
             /// Taking Phone Number from Console to Validate
             Console.WriteLine("Enter the Phone Number :");
             string mobileNumber = Console.ReadLine();
-            pattern.ValidatePhoneNo(mobileNumber);
+            Console.WriteLine(pattern.ValidatePhoneNo(mobileNumber));
 
             /// Taking Password from Console to Validate
             Console.WriteLine("Enter the Password :");
             string password = Console.ReadLine();
-            pattern.ValidatePassword(password);
+            Console.WriteLine(pattern.ValidatePassword(password));
         }
     }
 }
