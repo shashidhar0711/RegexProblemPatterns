@@ -36,11 +36,6 @@ namespace RegexPoblemPatterns
             string fullName = Console.ReadLine();
             Console.WriteLine(pattern.ValidateFirstName(fullName));
 
-            /// Taking Last Name from Console to Validate
-            //Console.WriteLine("Enter the Last Name :");
-            //string lastName = Console.ReadLine();
-            //Console.WriteLine(pattern.ValidateLastName(lastName));
-
             /// Taking Email from Console to Validate
             Console.WriteLine("Enter the Email :");
             string eMail = Console.ReadLine();
