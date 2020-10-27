@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -19,11 +19,11 @@ namespace RegexPoblemPatterns
         /// Validates the first name.
         /// </summary>
         /// <param name="fname">The fname.</param>
-        public bool ValidateFirstName(string fullName)
+        public bool ValidateFullName(string fullName)
         {
             /// It will check Full Name and, It returns ture or false
-            bool firstNameCheck = Regex.IsMatch(fullName, USER_NAME);
-            if (firstNameCheck)
+            bool fullNameCheck = Regex.IsMatch(fullName, USER_NAME);
+            if (fullNameCheck)
             {
                 return true;
             }
@@ -50,7 +50,7 @@ namespace RegexPoblemPatterns
                 return false;
             }
         }
-
+      
         /// <summary>
         /// Validates the phone number.
         /// </summary>

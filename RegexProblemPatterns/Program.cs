@@ -1,4 +1,4 @@
-﻿/*
+/*
  *  C# CODING STANDARDS - LINE SPACE
  *  NOTE - A SINGLE BLANK LINE SEPARATES THE TWO BLOCKS i.e. USING STATEMENTS, CLASS DECLARATION, etc
  */
@@ -31,7 +31,7 @@ namespace RegexPoblemPatterns
             /// Creating a Reference for Pattern Class
             Pattern pattern = new Pattern();
 
-            /// Taking First Name from Console to Validate
+            /// Taking Full Name from Console to Validate
             Console.WriteLine("Enter the Full Name :");
             string fullName = Console.ReadLine();
             Console.WriteLine(pattern.ValidateFirstName(fullName));
