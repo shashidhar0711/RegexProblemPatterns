@@ -20,7 +20,7 @@ using System;
 
 namespace RegexPoblemPatterns
 {
-    class Program
+    public class Program
     {
         /// <summary>
         /// Defines the entry point of the application.
