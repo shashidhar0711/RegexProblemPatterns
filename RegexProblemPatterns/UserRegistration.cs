@@ -20,7 +20,15 @@ namespace RegexProblemPatterns
         /// <returns></returns>
         public bool ValidateFullName(string fullName)
         {
-            return Regex.IsMatch(fullName, FULL_NAME);
+            try
+            {
+                return Regex.IsMatch(fullName, FULL_NAME);
+            }
+
+            catch
+            {
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_FULLNAME, "Invalid Name Format");
+            }
         }
 
         /// <summary>
@@ -30,7 +38,16 @@ namespace RegexProblemPatterns
         /// <returns></returns>
         public bool ValidateEmail(string eMail)
         {
-            return Regex.IsMatch(eMail, EMAIL_ID);
+            try
+            {
+                return Regex.IsMatch(eMail, EMAIL_ID);
+            }
+
+            catch
+            {
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_EMAIL, "Invalid Email Format");
+            }
+
         }
 
         /// <summary>
@@ -40,7 +57,15 @@ namespace RegexProblemPatterns
         /// <returns></returns>
         public bool ValidateMobileNumber(string mobileNumber)
         {
-            return Regex.IsMatch(mobileNumber, MOBILE_NUMBER);
+            try
+            {
+                return Regex.IsMatch(mobileNumber, MOBILE_NUMBER);
+            }
+
+            catch
+            {
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_PHONENUMBER, "Invalid Number Format");
+            }
         }
 
         /// <summary>
@@ -50,7 +75,15 @@ namespace RegexProblemPatterns
         /// <returns></returns>
         public bool ValidatePassword(string password)
         {
-            return Regex.IsMatch(password, PASSWORD);
+            try
+            {
+                return Regex.IsMatch(password, PASSWORD);
+            }
+
+            catch
+            {
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_PASSWORD, "Invalid Password Format");
+            }
         }
     }
 }
