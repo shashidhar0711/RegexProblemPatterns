@@ -1,4 +1,4 @@
-﻿/*
+/*
  * 
  *  C# CODING STANDARDS - LINE SPACE
  *  NOTE - A SINGLE BLANK LINE SEPARATES THE TWO BLOCKS i.e. USING STATEMENTS, CLASS DECLARATION, etc
@@ -18,8 +18,7 @@
 
 /// Including the requried assemblies in to the program
 using System;
-
-namespace RegexProblemPatterns
+namespace RegexPoblemPatterns
 {
     public class Program
     {
@@ -48,6 +47,7 @@ namespace RegexProblemPatterns
             string mobileNumber = Console.ReadLine();
             Console.WriteLine(validateUsingLamda.ValidateMobileNumber(mobileNumber));
 
+
             /// Taking Password from Console to Validate
             Console.WriteLine("Enter the Password :");
             string password = Console.ReadLine();
@@ -56,3 +56,4 @@ namespace RegexProblemPatterns
     }
     
 }
+
